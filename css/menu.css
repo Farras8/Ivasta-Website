@@ -1,0 +1,362 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+body{
+    color: black;
+    background-color: rgb(233, 237, 240);
+}
+
+
+.imglogo{
+    height: 60px;
+    width: 100px;
+}
+.cmenu{
+    display: flex;
+    gap: 2rem;
+}
+#shoppingcart{
+    color: black;
+}
+#menu{
+    display: none;
+    color: black;
+}
+#shoppingcart:hover{
+    transform: scale(1.2);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 6%;
+    background-color:rgba(198, 201, 204, 0.7);
+    border-bottom: 1px solid #9e9a9a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5000;
+}
+nav .Navbar li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 1rem;
+}
+
+nav .Navbar  a{   
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: rgb(14, 13, 13);
+}
+
+nav .Navbar a:hover, nav .Navbar a.active{
+    font-weight: bold;
+    color: rgb(228, 223, 223);
+    background-color: rgb(102, 94, 94);
+    border-radius: 10%;
+    padding: 10px;
+    cursor: pointer;
+}
+.shoppingcart{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: 100vh;
+    width: 30rem;
+    padding:0 1.5rem;
+    background-color:rgba(198, 201, 204, 0.9);
+    transition: 1s;
+}
+.shoppingcart img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+}
+.shoppingcart .cartproduct {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #666;
+    position: relative;
+  }
+.shoppingcart.active{
+    right: 0;
+}
+
+.shoppingcart h3{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.shoppingcart .price{
+    font-size: 1rem;
+    font-weight: 400;
+}
+.shoppingcart .trash{
+    color: black;
+}
+.shoppingcart .trash:hover{
+    transform: scale(1.1);
+}
+.shoppingcart .totalprice{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.menu{
+    padding:  11rem 7% 1.4rem;
+}
+.menu h2{
+    text-align: center;
+    color:rgb(78, 76, 76) ;
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.cardflex{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap:wrap ;
+}
+.card{
+    box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    height: auto;
+    width: auto;
+}
+.card .cardbody{
+    text-align: center;
+}
+.card .cardbody h4{
+    font-size: 1.35rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.card .cardbody p{
+    font-size: 1rem;
+    font-weight: 400;
+}
+.card .cardbody p span{
+    margin-left: 1rem;
+    font-size: 0.7rem;
+    font-weight: 300;
+    text-decoration: line-through;
+}
+
+
+img{
+    height: 200px;
+    width: 250px;
+}
+.addcart {
+    position: absolute;
+    top:35%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  
+  .card:hover .addcart {
+    opacity: 1;
+  }
+  
+  .addcart:hover {
+    background-color: #3e8e41;
+  }
+  .card:hover img {
+    transform: scale(0.9);
+    transition: 0.3s;
+  }
+
+  
+  svg.full {
+    fill:rgb(238, 245, 51);
+  }
+
+  .review{
+    padding: 3rem 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+  }
+  .review .h2-1{
+    color:rgb(78, 76, 76) ;
+    font-size: 3rem;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+    .review .span1{
+    background-color: #666;
+    border-radius: 10%;
+    padding: 10px;
+    color: rgb(211, 211, 211);
+    }
+    .cardbox{
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+  .reviewcard{
+    border-radius: 25px;
+    background-color: #FFF;
+    box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.2);
+    height: 380px;
+    width: 300px;
+  }
+  .Top-Content,
+  .Bot-Content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+  }
+  .Top-Content{
+      height: 200px;
+  }
+  .Top-Content h3{
+    font-size: 20px;
+  }
+  .Bot-Content{
+      margin-top: 2rem;
+  }
+  .card-img{
+    height: 60%;
+    width: 40%;
+    border-radius: 50%;
+  }
+  .name{
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+  }
+  .description{
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+  }
+  
+
+  footer{
+    padding: 1em;
+    background-color:rgb(198, 201, 204 );
+    margin-top: 1em;
+    text-align: center;
+    color:  #333;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+@media screen and (max-width: 1366px){
+    html{
+        font-size: 80%;
+    }
+    .reviewbody{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 768px){
+    html{
+        font-size: 70%;
+    }
+    #menu{
+        display: block;
+    }
+    #menu:hover{
+        transform: scale(1.2);
+    }
+    nav .Navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: rgba(198, 201, 204, 0.9);
+        width: 20rem;
+        height: 100vh;
+        transition: 0.5s;
+    }
+    nav .Navbar.active{
+        right: 0;
+    }
+    nav .Navbar a{
+        color: black;
+        display: block;
+        margin: 1.75rem;
+        padding: 0.5rem;
+    }
+}
+@media screen and (max-width: 650px){
+    .slide-content{
+        margin: 0 10px;
+      }
+      .swiper-navBtn{
+        display: none;
+      }
+    
+}
+@media screen and (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+    #menu{
+        display: block;
+    }
+    #menu:hover{
+        transform: scale(1.2);
+    }
+    nav .Navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: rgba(198, 201, 204, 0.9);
+        width: 20rem;
+        height: 100vh;
+    }
+    nav .Navbar.active{
+        right: 0;
+    }
+    nav .Navbar a{
+        color: black;
+        display: block;
+        margin: 1.75rem;
+        padding: 0.5rem;
+    }
+}
+@media screen and (max-width: 280px){
+    html{
+        font-size: 30%;
+    }
+    .menu{
+        padding:  16rem 7% 1.4rem;
+    }
+    .reviewcard{
+        height: 300px;
+        width: 250px;
+    }
+    .Bot-Content .name{
+        font-size: 12px;
+        margin-top: 0;
+    }
+    .Bot-Content .description{
+        font-size: 10px;
+        margin-top: 0.5rem;
+    }
+}
